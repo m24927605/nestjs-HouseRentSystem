@@ -7,7 +7,6 @@ export class UserDetailDTO {
     Birth: Date;
     IDCardNo: string;
     Phone: string;
-    ContacterPhone: string;
     Career: string;
     Address: string;
     Email: string;
@@ -16,4 +15,6 @@ export class UserDetailDTO {
     CreateDate: Date;
     ModifyUser: string;
     ModifyDate: Date;
+    ContactUser:string;
+    ContactUserPhone: string;
 }

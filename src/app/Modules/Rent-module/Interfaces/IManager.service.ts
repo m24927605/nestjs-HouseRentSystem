@@ -1,13 +1,13 @@
 'use strict';
 
-import { Manager } from '../Entities/index';
 import { IManager } from './index';
+import { ManagerDTO } from '../DTO/index';
 
 export interface IManagerService {
-    findAll(): Promise<Array<Manager>>;
-    findById(BackerID: number): Promise<Manager | null>;
-    findOne(options: Object): Promise<Manager | null>;
-    create(manager: Manager): Promise<Manager>;
-    update(BackerID: number, newValue: Manager): Promise<Manager | null>;
+    findAll(): Promise<Array<IManager>>;
+    findById(BackerID: number): Promise<IManager | null>;
+    findOne(options: Object): Promise<IManager | null>;
+    create(manager: ManagerDTO): Promise<IManager>;
+    update(BackerID: number, newValue: ManagerDTO): Promise<IManager | null>;
     delete(BackerID: number): Promise<number>;
 }

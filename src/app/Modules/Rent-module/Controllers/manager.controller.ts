@@ -11,13 +11,13 @@ export class ManagerController {
     constructor(private readonly managerSerice: ManagerSerice) { }
 
     @Get()
-    public async getRoles( @Response() res) {
+    public async getManager( @Response() res) {
         const manager = await this.managerSerice.findAll();
         return res.status(HttpStatus.OK).json(manager);
     }
 
     @Get('/find')
-    public async findRole( @Response() res) {
+    public async findManager( @Response() res) {
         //給定where條件
         let queryCondition = { where: { Name: 'Michael' } };
         const manager = await this.managerSerice.findOne(queryCondition);
@@ -25,14 +25,14 @@ export class ManagerController {
     }
 
     @Get('/:ID')
-    public async getRole( @Response() res, @Param() param) {
+    public async getOneManager( @Response() res, @Param() param) {
 
         const manager = await this.managerSerice.findById(param.ID);
         return res.status(HttpStatus.OK).json(manager);
     }
 
     @Post()
-    public async createRole( @Response() res, @Body() managerDTO: ManagerDTO) {
+    public async createManager( @Response() res, @Body() managerDTO: ManagerDTO) {
         managerDTO.CreateDate = moment().toDate();
         managerDTO.CreateUser = 'sa';
         const manager = await this.managerSerice.create(managerDTO);
@@ -40,7 +40,7 @@ export class ManagerController {
     }
 
     @Patch('/:ID')
-    public async updateRole( @Param() param, @Response() res, @Body() managerDTO: ManagerDTO) {
+    public async updateManager( @Param() param, @Response() res, @Body() managerDTO: ManagerDTO) {
         managerDTO.ModifyDate = moment().toDate();
         managerDTO.ModifyUser = 'sa';
         const manager = await this.managerSerice.update(param.ID, managerDTO);
@@ -48,7 +48,7 @@ export class ManagerController {
     }
 
     @Delete('/:ID')
-    public async deleteRole( @Param() param, @Response() res) {
+    public async deleteManager( @Param() param, @Response() res) {
 
         const manager = await this.managerSerice.delete(param.ID);
         return res.status(HttpStatus.OK).json(manager);

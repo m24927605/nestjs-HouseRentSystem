@@ -14,7 +14,8 @@ export const databaseProviders = [
             database: 'Rent',
             entities: [
                 __dirname + '/../Entities/*{.ts,.js}'
-            ]
+            ],
+            logging:true
         })
     }
 ]

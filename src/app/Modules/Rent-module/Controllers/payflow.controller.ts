@@ -11,13 +11,13 @@ export class PayFlowController {
     constructor(private readonly payflowSerice: PayFlowSerice) { }
 
     @Get()
-    public async getRoles( @Response() res) {
+    public async getPayFlow( @Response() res) {
         const payflow = await this.payflowSerice.findAll();
         return res.status(HttpStatus.OK).json(payflow);
     }
 
     @Get('/find')
-    public async findRole( @Response() res) {
+    public async findPayFlow( @Response() res) {
         //給定where條件
         let queryCondition = { where: { Name: 'Michael' } };
         const payflow = await this.payflowSerice.findOne(queryCondition);
@@ -25,14 +25,14 @@ export class PayFlowController {
     }
 
     @Get('/:ID')
-    public async getRole( @Response() res, @Param() param) {
+    public async getOnePayFlow( @Response() res, @Param() param) {
 
         const payflow = await this.payflowSerice.findById(param.ID);
         return res.status(HttpStatus.OK).json(payflow);
     }
 
     @Post()
-    public async createRole( @Response() res, @Body() payflowDTO: PayFlowDTO) {
+    public async createPayFlow( @Response() res, @Body() payflowDTO: PayFlowDTO) {
         payflowDTO.CreateDate = moment().toDate();
         payflowDTO.CreateUser = 'sa';
         const payflow = await this.payflowSerice.create(payflowDTO);
@@ -40,7 +40,7 @@ export class PayFlowController {
     }
 
     @Patch('/:ID')
-    public async updateRole( @Param() param, @Response() res, @Body() payflowDTO: PayFlowDTO) {
+    public async updatePayFlow( @Param() param, @Response() res, @Body() payflowDTO: PayFlowDTO) {
         payflowDTO.ModifyDate = moment().toDate();
         payflowDTO.ModifyUser = 'sa';
         const payflow = await this.payflowSerice.update(param.ID, payflowDTO);
@@ -48,7 +48,7 @@ export class PayFlowController {
     }
 
     @Delete('/:ID')
-    public async deleteRole( @Param() param, @Response() res) {
+    public async deletePayFlow( @Param() param, @Response() res) {
 
         const payflow = await this.payflowSerice.delete(param.ID);
         return res.status(HttpStatus.OK).json(payflow);

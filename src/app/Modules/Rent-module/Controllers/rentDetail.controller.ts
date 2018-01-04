@@ -11,13 +11,13 @@ export class RentDetailController {
     constructor(private readonly rentDetailSerice: RentDetailSerice) { }
 
     @Get()
-    public async getRoles( @Response() res) {
+    public async getRentDetail( @Response() res) {
         const rentDetail = await this.rentDetailSerice.findAll();
         return res.status(HttpStatus.OK).json(rentDetail);
     }
 
     @Get('/find')
-    public async findRole( @Response() res) {
+    public async findRentDetail( @Response() res) {
         //給定where條件
         let queryCondition = { where: { Name: 'Michael' } };
         const rentDetail = await this.rentDetailSerice.findOne(queryCondition);
@@ -25,14 +25,14 @@ export class RentDetailController {
     }
 
     @Get('/:ID')
-    public async getRole( @Response() res, @Param() param) {
+    public async getOneRentDetail( @Response() res, @Param() param) {
 
         const rentDetail = await this.rentDetailSerice.findById(param.ID);
         return res.status(HttpStatus.OK).json(rentDetail);
     }
 
     @Post()
-    public async createRole( @Response() res, @Body() rentDetailDTO: RentDetailDTO) {
+    public async createRentDetail( @Response() res, @Body() rentDetailDTO: RentDetailDTO) {
         rentDetailDTO.CreateDate = moment().toDate();
         rentDetailDTO.CreateUser = 'sa';
         const rentDetail = await this.rentDetailSerice.create(rentDetailDTO);
@@ -40,7 +40,7 @@ export class RentDetailController {
     }
 
     @Patch('/:ID')
-    public async updateRole( @Param() param, @Response() res, @Body() rentDetailDTO: RentDetailDTO) {
+    public async updateRentDetail( @Param() param, @Response() res, @Body() rentDetailDTO: RentDetailDTO) {
         rentDetailDTO.ModifyDate = moment().toDate();
         rentDetailDTO.ModifyUser = 'sa';
         const rentDetail = await this.rentDetailSerice.update(param.ID, rentDetailDTO);
@@ -48,7 +48,7 @@ export class RentDetailController {
     }
 
     @Delete('/:ID')
-    public async deleteRole( @Param() param, @Response() res) {
+    public async deleteRentDetail( @Param() param, @Response() res) {
 
         const rentDetail = await this.rentDetailSerice.delete(param.ID);
         return res.status(HttpStatus.OK).json(rentDetail);

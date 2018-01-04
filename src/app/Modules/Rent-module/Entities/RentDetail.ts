@@ -13,10 +13,11 @@ export class RentDetail {
     RoomID:number;
         
 
-    @Column("int",{ 
-        nullable:true, 
+    @Column("varchar",{ 
+        nullable:true,
+        length:20, 
         })
-    RoomNo:number;
+    RoomNo:string;
         
 
     @Column("datetime",{ 

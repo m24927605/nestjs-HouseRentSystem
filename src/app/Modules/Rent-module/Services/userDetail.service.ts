@@ -2,6 +2,7 @@
 
 import { Component, Inject } from '@nestjs/common';
 import { UserDetail } from '../Entities/index';
+import { UserDetailDTO } from '../DTO/UserDetail';
 import { IUserDetail, IUserDetailService } from '../Interfaces/index';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';

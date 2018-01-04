@@ -11,13 +11,13 @@ export class UserDetailController {
     constructor(private readonly userDetailSerice: UserDetailSerice) { }
 
     @Get()
-    public async getRoles( @Response() res) {
+    public async getUserDetail( @Response() res) {
         const userDetail = await this.userDetailSerice.findAll();
         return res.status(HttpStatus.OK).json(userDetail);
     }
 
     @Get('/find')
-    public async findRole( @Response() res) {
+    public async findUserDetail( @Response() res) {
         //給定where條件
         let queryCondition = { where: { Name: 'Michael' } };
         const userDetail = await this.userDetailSerice.findOne(queryCondition);
@@ -25,14 +25,15 @@ export class UserDetailController {
     }
 
     @Get('/:ID')
-    public async getRole( @Response() res, @Param() param) {
+    public async getOneUserDetail( @Response() res, @Param() param) {
 
         const userDetail = await this.userDetailSerice.findById(param.ID);
         return res.status(HttpStatus.OK).json(userDetail);
     }
 
     @Post()
-    public async createRole( @Response() res, @Body() userDetailDTO: UserDetailDTO) {
+    public async createUserDetail( @Response() res, @Body() userDetailDTO: UserDetailDTO) {
+
         userDetailDTO.CreateDate = moment().toDate();
         userDetailDTO.CreateUser = 'sa';
         const userDetail = await this.userDetailSerice.create(userDetailDTO);
@@ -40,7 +41,7 @@ export class UserDetailController {
     }
 
     @Patch('/:ID')
-    public async updateRole( @Param() param, @Response() res, @Body() userDetailDTO: UserDetailDTO) {
+    public async updateUserDetail( @Param() param, @Response() res, @Body() userDetailDTO: UserDetailDTO) {
         userDetailDTO.ModifyDate = moment().toDate();
         userDetailDTO.ModifyUser = 'sa';
         const userDetail = await this.userDetailSerice.update(param.ID, userDetailDTO);
@@ -48,7 +49,7 @@ export class UserDetailController {
     }
 
     @Delete('/:ID')
-    public async deleteRole( @Param() param, @Response() res) {
+    public async deleteUserDetail( @Param() param, @Response() res) {
 
         const userDetail = await this.userDetailSerice.delete(param.ID);
         return res.status(HttpStatus.OK).json(userDetail);

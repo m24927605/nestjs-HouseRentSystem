@@ -7,7 +7,6 @@ export interface IUserDetail {
     readonly Birth: Date;
     readonly IDCardNo: string;
     readonly Phone: string;
-    readonly ContacterPhone: string;
     readonly Career: string;
     readonly Address: string;
     readonly Email: string;
@@ -16,4 +15,6 @@ export interface IUserDetail {
     readonly CreateDate: Date;
     readonly ModifyUser: string;
     readonly ModifyDate: Date;
+    readonly ContactUser: string;
+    readonly ContactUserPhone: string;
 }

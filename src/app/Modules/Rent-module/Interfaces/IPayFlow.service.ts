@@ -1,13 +1,13 @@
 'use strict';
 
-import { PayFlow } from '../Entities/index';
 import { IPayFlow } from './index';
+import { PayFlowDTO } from '../DTO/index';
 
 export interface IPayFlowService {
-    findAll(): Promise<Array<PayFlow>>;
-    findById(ID: number): Promise<PayFlow | null>;
-    findOne(options: Object): Promise<PayFlow | null>;
-    create(payFlow: PayFlow): Promise<PayFlow>;
-    update(ID: number, newValue: PayFlow): Promise<PayFlow | null>;
+    findAll(): Promise<Array<IPayFlow>>;
+    findById(ID: number): Promise<IPayFlow | null>;
+    findOne(options: Object): Promise<IPayFlow | null>;
+    create(payFlow: PayFlowDTO): Promise<IPayFlow>;
+    update(ID: number, newValue: PayFlowDTO): Promise<IPayFlow | null>;
     delete(ID: number): Promise<number>;
 }
