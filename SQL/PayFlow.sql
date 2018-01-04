@@ -12,7 +12,7 @@
  Target Server Version : 14001000
  File Encoding         : 65001
 
- Date: 03/01/2018 23:07:48
+ Date: 04/01/2018 21:12:12
 */
 
 
@@ -29,9 +29,9 @@ CREATE TABLE [dbo].[PayFlow] (
   [PowerQty] float(53)  NULL,
   [Payment] decimal(18)  NULL,
   [TimeOfPayment] datetime  NULL,
-  [CreateUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [CreateUser] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [CreateDate] datetime  NULL,
-  [ModifyUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [ModifyUser] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [ModifyDate] datetime  NULL
 )
 GO

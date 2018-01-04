@@ -41,9 +41,9 @@ export class PayFlow {
     TimeOfPayment:Date;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     CreateUser:string;
         
@@ -54,9 +54,9 @@ export class PayFlow {
     CreateDate:Date;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     ModifyUser:string;
         

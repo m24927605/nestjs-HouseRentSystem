@@ -12,7 +12,7 @@
  Target Server Version : 14001000
  File Encoding         : 65001
 
- Date: 03/01/2018 23:07:57
+ Date: 04/01/2018 21:12:22
 */
 
 
@@ -33,9 +33,9 @@ CREATE TABLE [dbo].[RentDetail] (
   [EnterDate] datetime  NULL,
   [LeaveDate] datetime  NULL,
   [Status] char(1) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [CreateUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [CreateUser] nvarchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [CreateDate] datetime  NULL,
-  [ModifyUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [ModifyUser] nvarchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [ModifyDate] datetime  NULL
 )
 GO

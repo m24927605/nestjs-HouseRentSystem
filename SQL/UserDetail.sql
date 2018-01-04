@@ -12,7 +12,7 @@
  Target Server Version : 14001000
  File Encoding         : 65001
 
- Date: 03/01/2018 23:08:05
+ Date: 04/01/2018 21:12:33
 */
 
 
@@ -26,19 +26,20 @@ GO
 CREATE TABLE [dbo].[UserDetail] (
   [UserID] int  IDENTITY(1,1) NOT NULL,
   [RoomID] int  NULL,
-  [UserName] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [UserName] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [Birth] datetime  NULL,
-  [IDCardNo] nvarchar(10) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [Phone] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [ContacterPhone] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [Career] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [Address] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [Email] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [LineID] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [CreateUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [IDCardNo] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [Phone] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [Career] varchar(50) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [Address] varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [Email] varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [LineID] varchar(50) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [CreateUser] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [CreateDate] datetime  NULL,
-  [ModifyUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [ModifyDate] datetime  NULL
+  [ModifyUser] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [ModifyDate] datetime  NULL,
+  [ContactUser] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [ContactUserPhone] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL
 )
 GO
 

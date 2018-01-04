@@ -20,9 +20,9 @@ export class UserDetail {
     RoomID:number;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     UserName:string;
         
@@ -33,58 +33,51 @@ export class UserDetail {
     Birth:Date;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:10, 
+        length:20, 
         })
     IDCardNo:string;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     Phone:string;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
-        })
-    ContacterPhone:string;
-        
-
-    @Column("nvarchar",{ 
-        nullable:true,
-        length:255, 
+        length:50, 
         })
     Career:string;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:100, 
         })
     Address:string;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:100, 
         })
     Email:string;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:50, 
         })
     LineID:string;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     CreateUser:string;
         
@@ -95,9 +88,9 @@ export class UserDetail {
     CreateDate:Date;
         
 
-    @Column("nvarchar",{ 
+    @Column("varchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     ModifyUser:string;
         
@@ -106,5 +99,19 @@ export class UserDetail {
         nullable:true, 
         })
     ModifyDate:Date;
+        
+
+    @Column("varchar",{ 
+        nullable:true,
+        length:20, 
+        })
+    ContactUser:string;
+        
+
+    @Column("varchar",{ 
+        nullable:true,
+        length:20, 
+        })
+    ContactUserPhone:string;
         
 }

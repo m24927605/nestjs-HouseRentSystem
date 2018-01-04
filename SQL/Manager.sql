@@ -12,7 +12,7 @@
  Target Server Version : 14001000
  File Encoding         : 65001
 
- Date: 03/01/2018 23:07:28
+ Date: 04/01/2018 21:12:00
 */
 
 
@@ -25,13 +25,13 @@ GO
 
 CREATE TABLE [dbo].[Manager] (
   [BackerID] int  IDENTITY(1,1) NOT NULL,
-  [Name] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [Account] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
-  [Password] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [Name] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [Account] varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [Password] varchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [CreateDate] datetime  NULL,
-  [CreateUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
+  [CreateUser] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL,
   [ModifyDate] datetime  NULL,
-  [ModifyUser] nvarchar(255) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL
+  [ModifyUser] varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS  NULL
 )
 GO
 

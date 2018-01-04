@@ -68,7 +68,7 @@ export class RentDetail {
 
     @Column("nvarchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     CreateUser:string;
         
@@ -81,7 +81,7 @@ export class RentDetail {
 
     @Column("nvarchar",{ 
         nullable:true,
-        length:255, 
+        length:20, 
         })
     ModifyUser:string;
         
