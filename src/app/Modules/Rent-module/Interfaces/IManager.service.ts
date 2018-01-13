@@ -4,7 +4,7 @@ import { IManager } from './index';
 import { ManagerDTO } from '../DTO/index';
 
 export interface IManagerService {
-    findAll(): Promise<Array<IManager>>;
+    findAll(): Promise<[IManager[], number]>;
     findById(BackerID: number): Promise<IManager | null>;
     findOne(options: Object): Promise<IManager | null>;
     create(manager: ManagerDTO): Promise<IManager>;

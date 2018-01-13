@@ -4,7 +4,7 @@ import { IPayFlow } from './index';
 import { PayFlowDTO } from '../DTO/index';
 
 export interface IPayFlowService {
-    findAll(): Promise<Array<IPayFlow>>;
+    findAll(): Promise<[IPayFlow[], number]>;
     findById(ID: number): Promise<IPayFlow | null>;
     findOne(options: Object): Promise<IPayFlow | null>;
     create(payFlow: PayFlowDTO): Promise<IPayFlow>;

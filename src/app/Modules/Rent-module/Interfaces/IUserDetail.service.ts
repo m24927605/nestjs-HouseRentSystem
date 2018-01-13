@@ -4,7 +4,7 @@ import { IUserDetail } from './index';
 import { UserDetailDTO } from '../DTO/index';
 
 export interface IUserDetailService {
-    findAll(): Promise<Array<IUserDetail>>;
+    findAll(): Promise<[IUserDetail[], number]>;
     findById(UserID: number): Promise<IUserDetail | null>;
     findOne(options: Object): Promise<IUserDetail | null>;
     create(userDetail: UserDetailDTO): Promise<IUserDetail>;

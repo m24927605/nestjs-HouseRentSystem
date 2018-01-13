@@ -12,8 +12,8 @@ export class RentDetailSerice implements IRentDetailService {
         @InjectRepository(RentDetail)
         private readonly rentDetailRepository: Repository<RentDetail>) { }
 
-    public async findAll(): Promise<Array<RentDetail>> {
-        return await this.rentDetailRepository.find();
+    public async findAll(): Promise<[IRentDetail[], number]> {
+        return await this.rentDetailRepository.findAndCount();
     }
 
     //findOne()可以加入各種option，以下示範常見的where

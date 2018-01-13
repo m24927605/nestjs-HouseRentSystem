@@ -12,8 +12,8 @@ export class ManagerSerice implements IManagerService {
         @InjectRepository(Manager)
         private readonly managerRepository: Repository<Manager>) { }
 
-    public async findAll(): Promise<Array<Manager>> {
-        return await this.managerRepository.find();
+    public async findAll(): Promise<[IManager[], number]> {
+        return await this.managerRepository.findAndCount();
     }
 
     //findOne()可以加入各種option，以下示範常見的where

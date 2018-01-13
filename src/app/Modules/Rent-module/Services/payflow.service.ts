@@ -12,8 +12,8 @@ export class PayFlowSerice implements IPayFlowService {
         @InjectRepository(PayFlow)
         private readonly payflowRepository: Repository<PayFlow>) { }
 
-    public async findAll(): Promise<Array<PayFlow>> {
-        return await this.payflowRepository.find();
+    public async findAll(): Promise<[IPayFlow[], number]> {
+        return await this.payflowRepository.findAndCount();
     }
 
     //findOne()可以加入各種option，以下示範常見的where

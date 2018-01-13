@@ -13,8 +13,8 @@ export class UserDetailSerice implements IUserDetailService {
         @InjectRepository(UserDetail)
         private readonly userDetailRepository: Repository<UserDetail>) { }
 
-    public async findAll(): Promise<Array<UserDetail>> {
-        return await this.userDetailRepository.find();
+    public async findAll(): Promise<[IUserDetail[], number]> {
+        return await this.userDetailRepository.findAndCount();
     }
 
     //findOne()可以加入各種option，以下示範常見的where
