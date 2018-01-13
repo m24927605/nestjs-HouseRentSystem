@@ -13,21 +13,21 @@ export class Manager {
     BackerID:number;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
     Name:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:100, 
         })
     Account:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:255, 
         })
@@ -40,7 +40,7 @@ export class Manager {
     CreateDate:Date;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
@@ -53,7 +53,7 @@ export class Manager {
     ModifyDate:Date;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })

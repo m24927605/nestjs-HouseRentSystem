@@ -13,7 +13,7 @@ export class RentDetail {
     RoomID:number;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
@@ -60,7 +60,7 @@ export class RentDetail {
     LeaveDate:Date;
         
 
-    @Column("char",{ 
+    @Column("nchar",{ 
         nullable:true,
         length:1, 
         })

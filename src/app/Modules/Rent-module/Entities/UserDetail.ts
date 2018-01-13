@@ -20,7 +20,7 @@ export class UserDetail {
     RoomID:number;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
@@ -33,49 +33,49 @@ export class UserDetail {
     Birth:Date;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
     IDCardNo:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
     Phone:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:50, 
         })
     Career:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:100, 
         })
     Address:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:100, 
         })
     Email:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:50, 
         })
     LineID:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
@@ -88,7 +88,7 @@ export class UserDetail {
     CreateDate:Date;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
@@ -101,14 +101,14 @@ export class UserDetail {
     ModifyDate:Date;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
     ContactUser:string;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })

@@ -2,7 +2,7 @@
 
 export interface IRentDetail {
     readonly RoomID: number;
-    readonly RoomNo: number;
+    readonly RoomNo: string;
     readonly RentStartDate: Date;
     readonly RentEndDate: Date;
     readonly PowerUnitCost: number;

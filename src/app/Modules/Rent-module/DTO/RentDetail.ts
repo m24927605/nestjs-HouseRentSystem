@@ -2,7 +2,7 @@
 
 export class RentDetailDTO {
     RoomID: number;
-    RoomNo: number;
+    RoomNo: string;
     RentStartDate: Date;
     RentEndDate: Date;
     PowerUnitCost: number;

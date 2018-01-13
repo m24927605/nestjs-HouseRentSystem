@@ -41,7 +41,7 @@ export class PayFlow {
     TimeOfPayment:Date;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
@@ -54,7 +54,7 @@ export class PayFlow {
     CreateDate:Date;
         
 
-    @Column("varchar",{ 
+    @Column("nvarchar",{ 
         nullable:true,
         length:20, 
         })
